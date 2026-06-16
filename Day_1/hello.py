@@ -1,3 +1,3 @@
-print("Hell yoooo let's gooooooo!")
-name=input("enter ur name friend!")
-print("Hello my friend", name )
+print("Hello Good Morning hope ur doing well!")
+name=input("enter ur name friend! ")
+print("Hello my friend ", name )
