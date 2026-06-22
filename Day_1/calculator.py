@@ -16,3 +16,18 @@ else:
     result= "invaled sign"
 
 print("Answer:",result)
+
+paragraph = input("Enter a paragraph: ")
+
+word_count = {}
+
+for word in paragraph.lower().split():
+    cleaned = word.strip('.,!?";:()[]{}')
+    if cleaned in word_count:
+        word_count[cleaned] += 1
+    else:
+        word_count[cleaned] = 1
+
+print("\nWord Count:")
+for word, count in word_count.items():
+    print(f"{word}: {count}")
