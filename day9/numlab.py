@@ -23,7 +23,12 @@ def solve_hungarian(profit: np.ndarray) -> tuple[list[int], int]:
     cost = cost - cost.min(axis=1, keepdims=True)
     cost = cost - cost.min(axis=0, keepdims=True)
     n = cost.shape[0]
+    max_iter = 100
+    iteration = 0
     while True:
+        iteration += 1
+        if iteration > max_iter:
+            break
         assigned_rows = [-1] * n
         used_cols = [False] * n
     
